@@ -807,14 +807,14 @@ if build "libtiff" "4.5.0"; then
   execute make install
   build_done "libtiff" "4.5.0"
 fi
-if build "libpng" "1.6.39"; then
-  download "https://gigenet.dl.sourceforge.net/project/libpng/libpng16/1.6.39/libpng-1.6.39.tar.gz" "libpng-1.6.39.tar.gz"
+if build "libpng" "1.6.43"; then
+  download "https://sourceforge.net/projects/libpng/files/libpng16/1.6.43/libpng-1.6.43.tar.gz/download" "libpng-1.6.43.tar.gz"
   export LDFLAGS="${LDFLAGS}"
   export CPPFLAGS="${CFLAGS}"
   execute ./configure --prefix="${WORKSPACE}" --disable-shared --enable-static
   execute make -j $MJOBS
   execute make install
-  build_done "libpng" "1.6.39"
+  build_done "libpng" "1.6.43"
 fi
 
 ## does not compile on monterey -> _PrintGifError
